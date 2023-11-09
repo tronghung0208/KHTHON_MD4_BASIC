@@ -186,6 +186,14 @@ BEGIN
 END;
 &&
 DELIMITER ;
+CALL PROC_INSERTSTUDENT(
+    'S010',
+    'Phan Trọng',
+     '1998-10-04',
+     1, 
+     'Tuyên Quang', 
+     '987242678'
+);
 
 -- Tạo PROC_UPDATESUBJECT dùng để cập nhật tên môn học theo mã môn học.
 
@@ -202,6 +210,8 @@ END;
 &&
 DELIMITER ;
 
+CALL PROC_UPDATESUBJECT("MH01",'Toán'
+);
 /*
  - Tạo PROC_DELETEMARK dùng để xoá toàn bộ điểm các môn học theo mã học
 sinh và trả về số bản ghi đã xóa.
